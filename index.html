@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thanh lý Máy móc/Thiết bị</title>
+<meta name="description" content="THTTEX industrial equipment available for direct discussion and inspection in Vietnam.">
+<link rel="icon" href="assets/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0b63a8;--blue2:#084c7e;--green:#148960;--green2:#0b694a;
+  --ink:#152a31;--muted:#60736f;--line:#dce8e3;--bg:#f5f9f7;--white:#fff;
+  --shadow:0 18px 55px rgba(16,72,68,.10);--shadow2:0 26px 80px rgba(7,76,112,.15);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+  radial-gradient(circle at 8% 10%,rgba(11,99,168,.07),transparent 28%),
+  radial-gradient(circle at 92% 18%,rgba(20,137,96,.08),transparent 27%),
+  var(--bg);color:var(--ink);font-family:"Roboto",Arial,sans-serif;line-height:1.62;overflow-x:hidden}
+body.lightbox-open{overflow:hidden}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+button,input,textarea{font:inherit}
+.progress{position:fixed;left:0;top:0;height:3px;width:0;z-index:5000;background:linear-gradient(90deg,var(--blue),var(--green))}
+.site-header{position:sticky;top:0;z-index:2500;background:rgba(255,255,255,.91);backdrop-filter:blur(15px);border-bottom:1px solid rgba(220,232,227,.9)}
+.header-inner{max-width:1280px;margin:auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-logo{width:54px;height:54px;border-radius:12px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;overflow:hidden}
+.brand-logo img{width:100%;height:100%;object-fit:contain;padding:4px}
+.brand-name{font-weight:800;color:var(--blue2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:430px}
+.brand-sub{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:430px}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:9px 10px;border-radius:10px;font-size:13px;font-weight:700;color:#4f625e;transition:.2s}
+.nav a:hover{background:#eaf5fb;color:var(--blue2)}
+.nav .contact-nav{background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;padding:10px 14px}
+.container{max-width:1280px;margin:auto;padding:24px 20px 88px}
+.hero{position:relative;overflow:hidden;min-height:620px;border-radius:34px;color:#fff;background:
+  radial-gradient(circle at 72% 24%,rgba(88,211,164,.23),transparent 25%),
+  radial-gradient(circle at 20% 84%,rgba(76,174,236,.20),transparent 31%),
+  linear-gradient(125deg,#053b6d 0%,#0b64aa 45%,#0f7d6b 78%,#148960 100%);
+  box-shadow:0 28px 90px rgba(4,58,77,.22)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.14);pointer-events:none}
+.hero:before{width:450px;height:450px;right:-105px;top:-135px;box-shadow:0 0 0 65px rgba(255,255,255,.03),0 0 0 130px rgba(255,255,255,.02);animation:float 10s ease-in-out infinite}
+.hero:after{width:280px;height:280px;left:-90px;bottom:-105px;animation:float 12s ease-in-out infinite reverse}
+.hero-inner{position:relative;z-index:2;min-height:620px;padding:62px;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(300px,.82fr);gap:38px;align-items:end}
+.kicker{display:inline-flex;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.10);font-size:12px;font-weight:800;letter-spacing:1.2px}
+.hero-title{font-size:clamp(48px,6.6vw,84px);line-height:.99;letter-spacing:-2.5px;font-weight:800;margin:18px 0 20px;max-width:900px}
+.hero-title div{margin:0;padding:0}
+.hero-intro{font-size:17px;color:#e7f5ef;max-width:810px}
+.richtext div{margin:0;padding:0}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.hero-actions a{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:13px;background:#fff;color:var(--blue2);font-size:14px;font-weight:800;transition:.22s}
+.hero-actions a:last-child{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.26);color:#fff}
+.hero-actions a:hover{transform:translateY(-2px)}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hero-stat{min-height:154px;padding:22px;border-radius:22px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.20);backdrop-filter:blur(8px);display:flex;flex-direction:column;justify-content:center}
+.hero-stat b{font-size:33px;line-height:1;margin-bottom:15px}
+.hero-stat span{font-weight:700;font-size:14px}
+.hero-stat em{font-style:normal;color:#d9efe7;font-size:13px;margin-top:5px}
+.section{margin-top:66px}
+.section-label{font-size:11px;letter-spacing:1.5px;font-weight:900;color:var(--green);margin-bottom:7px}
+.section-title{font-size:clamp(32px,4vw,49px);letter-spacing:-1.2px;line-height:1.06;color:#123f55;font-weight:800;margin:0 0 9px}
+.section-intro{max-width:820px;color:var(--muted)}
+.equipment-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:23px}
+.equipment-card{background:#fff;border:1px solid var(--line);border-radius:27px;overflow:hidden;box-shadow:var(--shadow);transition:.28s}
+.equipment-card:hover{transform:translateY(-5px);box-shadow:var(--shadow2)}
+.equipment-cover{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#e4efec}
+.equipment-cover img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.equipment-card:hover .equipment-cover img{transform:scale(1.04)}
+.cover-overlay{position:absolute;inset:auto 0 0;height:46%;background:linear-gradient(transparent,rgba(1,28,40,.55))}
+.type-chip{position:absolute;top:15px;left:15px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--blue2);font-size:10px;font-weight:900;letter-spacing:.8px}
+.image-count{position:absolute;right:15px;bottom:13px;color:#fff;font-size:12px;font-weight:800}
+.equipment-card-body{padding:24px}
+.equipment-card h3{font-size:30px;line-height:1.08;letter-spacing:-.6px;margin:0 0 6px;color:#123f55}
+.title-en{font-size:16px}
+.en{color:#49635b;font-style:italic}
+.card-desc{color:var(--muted);margin:14px 0 17px}
+.details-link{font-size:13px;font-weight:900;color:var(--blue2)}
+.details-link span{display:inline-block;transition:.2s}
+.details-link:hover span{transform:translateX(4px)}
+.machine-section{margin-top:42px;background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:86px}
+.machine-topline{height:5px;background:linear-gradient(90deg,var(--blue),var(--green))}
+.machine-inner{padding:28px}
+.machine-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(350px,.85fr);gap:28px}
+.gallery-main{position:relative;aspect-ratio:16/10;border-radius:22px;overflow:hidden;background:#e4efec}
+.gallery-main-img{width:100%;height:100%;object-fit:cover;transition:opacity .25s ease,transform .55s ease}
+.gallery-main:hover .gallery-main-img{transform:scale(1.016)}
+.zoom-btn{position:absolute;right:14px;top:14px;width:42px;height:42px;border:0;border-radius:12px;background:rgba(255,255,255,.94);color:var(--blue2);font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.12);cursor:pointer}
+.gallery-index{position:absolute;left:14px;bottom:14px;padding:6px 9px;border-radius:9px;background:rgba(4,29,40,.66);color:#fff;font-size:11px;font-weight:800}
+.thumbs{display:flex;gap:9px;overflow:auto;padding:10px 2px 4px;scrollbar-width:thin}
+.thumb{width:100px;aspect-ratio:4/3;flex:0 0 auto;padding:0;border-radius:12px;border:2px solid transparent;overflow:hidden;background:#e5efeb;position:relative;cursor:pointer}
+.thumb.active{border-color:var(--green)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb span{position:absolute;left:5px;bottom:5px;background:rgba(2,27,39,.67);color:#fff;border-radius:6px;padding:2px 5px;font-size:10px}
+.machine-copy{align-self:start}
+.machine-type{display:inline-flex;padding:6px 9px;border-radius:999px;background:linear-gradient(135deg,#eaf4fb,#e8f7f0);color:var(--blue2);font-size:10px;font-weight:900;letter-spacing:1px}
+.machine-copy h2{font-size:clamp(36px,4.4vw,58px);line-height:1.02;letter-spacing:-1.5px;margin:14px 0 6px;color:#123f55}
+.machine-en{font-size:20px}
+.machine-desc{margin:20px 0;color:#50635b}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.fact{min-height:92px;padding:14px;border:1px solid #dce9e3;border-radius:15px;background:linear-gradient(145deg,#fbfcfb,#f2f8f5);transition:.22s}
+.fact:hover{transform:translateY(-2px);border-color:#bbdccd}
+.fact small{display:block;color:var(--muted);font-size:11px;margin-bottom:6px}
+.fact strong{display:block;color:#173f4e;font-size:14px;line-height:1.42}
+.machine-cta{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+.button{display:inline-flex;align-items:center;justify-content:center;padding:11px 14px;border-radius:12px;font-size:13px;font-weight:800}
+.button.primary{background:linear-gradient(135deg,var(--blue),var(--green));color:#fff}
+.button.secondary{border:1px solid #c7dce7;color:var(--blue2);background:#fff}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.info-card{border:1px solid var(--line);border-radius:18px;padding:19px;background:#fbfdfc}
+.info-title{font-weight:800;color:#17495a;margin-bottom:13px;display:flex;align-items:center;gap:8px}
+.info-title span{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,#eaf4fb,#e8f7f0);color:var(--green2)}
+.spec-table{width:100%;border-collapse:collapse}
+.spec-table td{padding:11px 5px;border-bottom:1px solid var(--line);vertical-align:top}
+.spec-table tr:last-child td{border-bottom:0}
+.spec-table td:first-child{width:47%;color:var(--muted);font-size:12px;padding-right:12px}
+.spec-table td:last-child{font-weight:700;color:#173f4e;font-size:13px}
+.process{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:13px;margin-top:22px}
+.process:before{content:"";position:absolute;top:31px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));opacity:.2}
+.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;position:relative;z-index:1;box-shadow:0 12px 35px rgba(20,60,45,.05)}
+.step-num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;font-size:12px;font-weight:900;margin-bottom:11px}
+.step b{font-size:13px} .step small{display:block;color:var(--muted);margin-top:3px}
+.contact-section{margin-top:65px;border-radius:30px;overflow:hidden;color:#fff;background:
+  radial-gradient(circle at 82% 16%,rgba(85,211,165,.19),transparent 25%),
+  linear-gradient(125deg,#063c6e,#0b64a1 48%,#0e795c);box-shadow:0 28px 80px rgba(4,58,77,.20);scroll-margin-top:86px}
+.contact-grid{padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.contact-title{font-size:clamp(35px,4.3vw,57px);line-height:1.04;letter-spacing:-1.25px;font-weight:800;margin:12px 0 18px}
+.contact-copy{color:#e0f2eb}
+.contact-details{margin-top:24px;display:grid;gap:8px;font-size:14px}
+.contact-details a{text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px}
+.contact-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.contact-buttons a{padding:10px 13px;border-radius:11px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.26);font-size:13px;font-weight:800}
+.form-card{background:rgba(255,255,255,.97);color:var(--ink);padding:21px;border-radius:20px;align-self:start}
+.form-card label{font-size:11px;font-weight:800;color:#66766f;display:block;margin:8px 0 4px}
+.form-card input,.form-card textarea{width:100%;border:1px solid #d5e1db;border-radius:11px;padding:11px 12px;background:#fff;outline:none;transition:.2s}
+.form-card input:focus,.form-card textarea:focus{border-color:#63ad91;box-shadow:0 0 0 3px rgba(20,137,96,.10)}
+.form-card textarea{min-height:112px;resize:vertical}
+.form-card button{width:100%;margin-top:11px;border:0;cursor:pointer}
+.form-note{font-size:11px;color:#7a8882;margin-top:7px}
+.footer{max-width:1280px;margin:auto;padding:24px 20px 40px;color:#7b8982;font-size:12px;display:flex;justify-content:space-between;gap:15px}
+.float-contact{position:fixed;right:20px;bottom:20px;z-index:1800;display:inline-flex;align-items:center;gap:8px;padding:12px 15px;border-radius:999px;color:#fff;background:linear-gradient(135deg,var(--blue),var(--green));font-size:13px;font-weight:900;box-shadow:0 14px 35px rgba(4,75,75,.25);transition:.22s}
+.float-contact:hover{transform:translateY(-3px)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.lightbox{position:fixed;inset:0;z-index:7000;background:rgba(0,14,22,.93);display:none;align-items:center;justify-content:center;padding:34px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1400px,92vw);max-height:84vh;object-fit:contain;border-radius:14px;box-shadow:0 30px 90px rgba(0,0,0,.42)}
+.lb-close,.lb-prev,.lb-next{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(8px);width:46px;height:46px;border-radius:12px;font-size:20px;cursor:pointer}
+.lb-close{right:20px;top:20px} .lb-prev{left:22px;top:50%} .lb-next{right:22px;top:50%}
+.lb-caption{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);color:#fff;font-size:13px;text-align:center;max-width:75vw}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-12px,16px)}}
+@media(max-width:980px){
+  .nav{display:none} .hero-inner,.machine-grid,.contact-grid{grid-template-columns:1fr}
+  .equipment-grid{grid-template-columns:1fr} .hero{min-height:auto} .hero-inner{min-height:620px;padding:44px 34px}
+  .process{grid-template-columns:1fr 1fr} .process:before{display:none}
+}
+@media(max-width:680px){
+  .header-inner{padding:8px 14px} .brand-logo{width:45px;height:45px} .brand-name,.brand-sub{max-width:245px}
+  .container{padding:14px 12px 78px} .hero{border-radius:24px} .hero-inner{padding:34px 22px;min-height:590px}
+  .hero-title{font-size:46px;letter-spacing:-1.6px} .hero-stats{grid-template-columns:1fr 1fr} .hero-stat{min-height:135px;padding:18px}
+  .section{margin-top:48px} .machine-inner{padding:16px} .machine-section{border-radius:22px}
+  .gallery-main{border-radius:16px} .fact-grid,.info-grid{grid-template-columns:1fr} .process{grid-template-columns:1fr}
+  .contact-section{border-radius:22px} .contact-grid{padding:24px 18px} .float-contact{right:12px;bottom:12px}
+  .footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <div class="brand-logo"><img src="assets/logo.jpg" alt="THTTEX"></div>
+      <div>
+        <div class="brand-name">Thanh lý Máy móc/Thiết bị</div>
+        <div class="brand-sub">Liquidation of Machinery/Equipment</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="#equipment">Thiết bị / Equipment</a>
+      <a href="#stenter">Máy căng kim / Stenter</a>
+      <a href="#boiler">Lò hơi / Boiler</a>
+      <a href="#contact" class="contact-nav">Liên hệ / Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="container">
+  <section class="hero reveal">
+    <div class="hero-inner">
+      <div>
+        <div class="kicker">THTTEX INDUSTRIAL EQUIPMENT</div>
+        <div class="hero-title">Thiết bị<div>công nghiệp<br><span style="font-weight:400">Industrial Equipment&nbsp;</span></div></div>
+        <div class="hero-intro richtext">Một số thiết bị công nghiệp đã qua sử dụng tại THTTEX hiện được đưa vào<div>danh mục thanh lý theo<div>kế hoạch sắp xếp và nâng cấp hệ thống sản xuất.<br><em>Selected pre owned industrial equipment at THTTEX is now available</em></div><div><em>as part of the Company's production system restructuring and upgrade plan.</em></div></div></div>
+        <div class="hero-actions">
+          <a href="#equipment">Xem thiết bị / View Equipment</a>
+          <a href="#contact">Liên hệ / Contact</a>
+        </div>
+      </div>
+      <div class="hero-stats"><div class="hero-stat">
+          <b>02</b>
+          <span>Thiết bị hiện có</span>
+          <em>Available equipment</em>
+        </div><div class="hero-stat">
+          <b>15T</b>
+          <span>Công suất lò hơi</span>
+          <em>Boiler capacity</em>
+        </div><div class="hero-stat">
+          <b>15</b>
+          <span>Ảnh thiết bị/máy móc</span>
+          <em>Equipment/Machinery images</em>
+        </div><div class="hero-stat">
+          <b>Vietnam</b>
+          <span>Kiểm tra tại Việt Nam</span>
+          <em>Inspection in Vietnam</em>
+        </div></div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="equipment">
+    <div class="section-label">AVAILABLE INDUSTRIAL ASSETS</div>
+    <div class="section-title">Thiết bị hiện có / Available Equipment</div>
+    <div class="section-intro richtext">Thông tin dưới đây là bản giới thiệu ban đầu. Các thông số chi tiết sẽ được cập nhật sau khi xác nhận với<div>bộ phận kỹ thuật. <span class="en">The information below is an initial overview. Detailed specifications will be updated after technical confirmation.</span></div></div>
+    <div class="equipment-grid">
+      <article class="equipment-card reveal">
+        <a href="#stenter" class="equipment-cover">
+          <img src="assets/images/stenter_01_AME03384.jpg" alt="Máy căng kim" loading="lazy">
+          <div class="cover-overlay"></div>
+          <span class="type-chip">TEXTILE FINISHING EQUIPMENT</span>
+          <span class="image-count">6 images</span>
+        </a>
+        <div class="equipment-card-body">
+          <h3>Máy căng kim</h3>
+          <div class="en title-en">Stenter Machine</div>
+          <div class="card-desc richtext">Thiết bị thuộc công đoạn hoàn tất dệt may, hiện có thể được xem xét và<div>kiểm tra thực tế tại nhà máy. <span class="en">Pre owned textile finishing equipment available for review and on site inspection.</span></div></div>
+          <a class="details-link" href="#stenter">Xem chi tiết / View Details <span>→</span></a>
+        </div>
+      </article>
+    
+      <article class="equipment-card reveal">
+        <a href="#boiler" class="equipment-cover">
+          <img src="assets/images/boiler_01_LTAI0932.jpg" alt="Lò hơi công nghiệp 15 tấn" loading="lazy">
+          <div class="cover-overlay"></div>
+          <span class="type-chip">INDUSTRIAL UTILITY EQUIPMENT</span>
+          <span class="image-count">9 images</span>
+        </a>
+        <div class="equipment-card-body">
+          <h3>Lò hơi công nghiệp 15 tấn</h3>
+          <div class="en title-en">15 Tons/hour Industrial Steam Boiler</div>
+          <div class="card-desc richtext">Hệ thống lò hơi công nghiệp công suất danh định 15 tấn mỗi giờ, sẵn sàng để khách hàng quan tâm trao đổi và sắp xếp kiểm tra thực tế.<div><span class="en">Industrial steam boiler with a nominal capacity of 15 tons per hour, available for discussion and on site inspection.</span></div></div>
+          <a class="details-link" href="#boiler">Xem chi tiết / View Details <span>→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  
+      <section class="machine-section reveal" id="stenter">
+        <div class="machine-topline"></div>
+        <div class="machine-inner">
+          <div class="machine-grid">
+            <div class="gallery-wrap">
+              
+      <div class="gallery-main" data-gallery="stenter">
+        <img class="gallery-main-img" src="assets/images/stenter_01_AME03384.jpg" alt="Máy căng kim">
+        <button class="zoom-btn" type="button" data-zoom="stenter" aria-label="Open image">⤢</button>
+        <div class="gallery-index">1 / 6</div>
+      </div>
+      <div class="thumbs"><button class="thumb active" type="button"
+                data-machine="stenter" data-index="0" aria-label="Image 1">
+                <img src="assets/images/stenter_01_AME03384.jpg" alt="Máy căng kim image 1" loading="lazy">
+                <span>1</span>
+            </button><button class="thumb" type="button"
+                data-machine="stenter" data-index="1" aria-label="Image 2">
+                <img src="assets/images/stenter_02_AME03385.jpg" alt="Máy căng kim image 2" loading="lazy">
+                <span>2</span>
+            </button><button class="thumb" type="button"
+                data-machine="stenter" data-index="2" aria-label="Image 3">
+                <img src="assets/images/stenter_03_AME03380.jpg" alt="Máy căng kim image 3" loading="lazy">
+                <span>3</span>
+            </button><button class="thumb" type="button"
+                data-machine="stenter" data-index="3" aria-label="Image 4">
+                <img src="assets/images/stenter_04_AME03386.jpg" alt="Máy căng kim image 4" loading="lazy">
+                <span>4</span>
+            </button><button class="thumb" type="button"
+                data-machine="stenter" data-index="4" aria-label="Image 5">
+                <img src="assets/images/stenter_05_AME03385.jpg" alt="Máy căng kim image 5" loading="lazy">
+                <span>5</span>
+            </button><button class="thumb" type="button"
+                data-machine="stenter" data-index="5" aria-label="Image 6">
+                <img src="assets/images/stenter_06_AME03399.jpg" alt="Máy căng kim image 6" loading="lazy">
+                <span>6</span>
+            </button></div>
+    
+            </div>
+            <div class="machine-copy">
+              <span class="machine-type">TEXTILE FINISHING EQUIPMENT</span>
+              <h2>Máy căng kim</h2>
+              <div class="en machine-en">Stenter Machine</div>
+              <div class="machine-desc richtext">Thiết bị đã qua sử dụng thuộc công đoạn hoàn tất vải.<div>Thiết bị hiện có tại THTTEX và có thể sắp xếp để khách hàng</div><div>quan tâm xem xét trực tiếp.<br><span class="en">Pre owned equipment used in the textile finishing process.</span></div><div><span class="en">The machine is currently located at THTTEX and can be made available for on site review by interested buyers.</span></div></div>
+              <div class="fact-grid"><div class="fact">
+              <small>Hãng / Manufacturer</small>
+              <strong>Tung Yang</strong>
+            </div><div class="fact">
+              <small>Model</small>
+              <strong>WINT HI ECHO 2000</strong>
+            </div><div class="fact">
+              <small>Năm / Year</small>
+              <strong>2014</strong>
+            </div><div class="fact">
+              <small>Tình trạng / Status</small>
+              <strong>Có thể kiểm tra / Inspection available</strong>
+            </div></div>
+              <div class="machine-cta">
+                <a class="button primary" href="#contact">Yêu cầu thông tin / Request Information</a>
+                <a class="button secondary" href="#contact">Đăng ký xem thiết bị / Arrange Inspection</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-title"><span>≡</span>Thông số chính / Key Specifications</div>
+              <table class="spec-table"><tr><td>Xuất xứ / Origin</td><td>Taiwan</td></tr><tr><td>Khổ / Width</td><td>1800 - 10 chamber</td></tr></table>
+            </div>
+            <div class="info-card">
+              <div class="info-title"><span>✓</span>Tình trạng & kiểm tra / Status & Inspection</div>
+              <div class="richtext"><strong>Có thể sắp xếp kiểm tra thực tế tại nhà máy.</strong><br>Các thông tin về tình trạng vận hành, ngày vận hành gần nhất và khả năng chạy thử sẽ được xác nhận theo hồ sơ kỹ thuật.<br><span class="en"><strong>On site inspection can be arranged.</strong><br>Operating status, last operation date and running test availability will be confirmed based on technical records.</span></div>
+            </div>
+            <div class="info-card">
+              <div class="info-title"><span>↗</span>Lý do cung cấp / Why Available</div>
+              <div class="richtext">Thiết bị được đưa vào danh mục thanh lý theo kế hoạch sắp xếp và<div>nâng cấp hệ thống sản xuất của Công ty.<br><span class="en">The equipment is being made available as part of the Company's production system restructuring and upgrade plan.</span></div></div>
+            </div>
+            <div class="info-card">
+              <div class="info-title"><span>□</span>Phạm vi cung cấp / Scope of Supply</div>
+              <div class="richtext">Phạm vi máy chính, phụ kiện, tài liệu kỹ thuật và các hạng mục đi kèm<div>sẽ được xác nhận khi trao đổi trực tiếp.<br><span class="en">Main machine, accessories, technical documents and included items will be confirmed during direct discussion.</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="machine-section reveal" id="boiler">
+        <div class="machine-topline"></div>
+        <div class="machine-inner">
+          <div class="machine-grid">
+            <div class="gallery-wrap">
+              
+      <div class="gallery-main" data-gallery="boiler">
+        <img class="gallery-main-img" src="assets/images/boiler_01_LTAI0932.jpg" alt="Lò hơi công nghiệp 15 tấn">
+        <button class="zoom-btn" type="button" data-zoom="boiler" aria-label="Open image">⤢</button>
+        <div class="gallery-index">1 / 9</div>
+      </div>
+      <div class="thumbs"><button class="thumb active" type="button"
+                data-machine="boiler" data-index="0" aria-label="Image 1">
+                <img src="assets/images/boiler_01_LTAI0932.jpg" alt="Lò hơi công nghiệp 15 tấn image 1" loading="lazy">
+                <span>1</span>
+            </button><button class="thumb" type="button"
+                data-machine="boiler" data-index="1" aria-label="Image 2">
+                <img src="assets/images/boiler_02_AME03553.jpg" alt="Lò hơi công nghiệp 15 tấn image 2" loading="lazy">
+                <span>2</span>
+            </button><button class="thumb" type="button"
+                data-machine="boiler" data-index="2" aria-label="Image 3">
+                <img src="assets/images/boiler_03_AME03559.jpg" alt="Lò hơi công nghiệp 15 tấn image 3" loading="lazy">
+                <span>3</span>
+            </button><button class="thumb" type="button"
+                data-machine="boiler" data-index="3" aria-label="Image 4">
+                <img src="assets/images/boiler_04_AME03574.jpg" alt="Lò hơi công nghiệp 15 tấn image 4" loading="lazy">
+                <span>4</span>
+            </button><button class="thumb" type="button"
+                data-machine="boiler" data-index="4" aria-label="Image 5">
+                <img src="assets/images/boiler_05_AME03587.jpg" alt="Lò hơi công nghiệp 15 tấn image 5" loading="lazy">
+                <span>5</span>
+            </button><button class="thumb" type="button"
+                data-machine="boiler" data-index="5" aria-label="Image 6">
+                <img src="assets/images/boiler_06_AME03591.jpg" alt="Lò hơi công nghiệp 15 tấn image 6" loading="lazy">
+                <span>6</span>
+            </button><button class="thumb" type="button"
+                data-machine="boiler" data-index="6" aria-label="Image 7">
+                <img src="assets/images/boiler_07_AME03583.jpg" alt="Lò hơi công nghiệp 15 tấn image 7" loading="lazy">
+                <span>7</span>
+            </button><button class="thumb" type="button"
+                data-machine="boiler" data-index="7" aria-label="Image 8">
+                <img src="assets/images/boiler_08_AME03574.jpg" alt="Lò hơi công nghiệp 15 tấn image 8" loading="lazy">
+                <span>8</span>
+            </button><button class="thumb" type="button"
+                data-machine="boiler" data-index="8" aria-label="Image 9">
+                <img src="assets/images/boiler_09_AME03630.jpg" alt="Lò hơi công nghiệp 15 tấn image 9" loading="lazy">
+                <span>9</span>
+            </button></div>
+    
+            </div>
+            <div class="machine-copy">
+              <span class="machine-type">INDUSTRIAL UTILITY EQUIPMENT</span>
+              <h2>Lò hơi công nghiệp 15 tấn</h2>
+              <div class="en machine-en">15 Tons/hour Industrial Steam Boiler</div>
+              <div class="machine-desc richtext">Hệ thống lò hơi công nghiệp có công suất 15 tấn/giờ. Thiết bị hiện có tại THTTEX và được cung cấp để các doanh nghiệp có nhu cầu có thể tìm hiểu, trao đổi và sắp xếp kiểm tra thực tế.<br><span class="en">Industrial steam boiler system with a nominal capacity of 15 tons per hour. The equipment is currently located at THTTEX and is available for interested industrial buyers to review, discuss and inspect on site.</span></div>
+              <div class="fact-grid"><div class="fact">
+              <small>Công suất hơi / Steam Capacity</small>
+              <strong>15 tons / 15 tấn</strong>
+            </div><div class="fact">
+              <small>Hãng / Manufacturer</small>
+              <strong>MARTECH</strong>
+            </div><div class="fact">
+              <small>Model</small>
+              <strong>MCO-15 (hybrid)</strong>
+            </div><div class="fact">
+              <small>Loại lò / Type</small>
+              <strong>Dạng ống nước, 2 balong, 3 pass, đốt đa nhiên liệu / Water-tube, 2 drum, 3 pass, multi-fuel fired</strong>
+            </div></div>
+              <div class="machine-cta">
+                <a class="button primary" href="#contact">Yêu cầu thông tin / Request Information</a>
+                <a class="button secondary" href="#contact">Đăng ký xem thiết bị / Arrange Inspection</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-title"><span>≡</span>Thông số chính / Key Specifications</div>
+              <table class="spec-table"><tr><td>Năm / Year</td><td>2012</td></tr><tr><td>Tình trạng kiểm định / Inspection Status</td><td>Có thể kiểm tra / Inspection available</td></tr></table>
+            </div>
+            <div class="info-card">
+              <div class="info-title"><span>✓</span>Tình trạng & kiểm tra / Status & Inspection</div>
+              <div class="richtext"><strong>Có thể sắp xếp kiểm tra thực tế theo lịch hẹn.</strong><br>Tình trạng vận hành, kiểm định, áp suất làm việc và các thông tin kỹ thuật khác sẽ được cập nhật sau khi xác nhận.<br><span class="en"><strong>On site inspection can be arranged by appointment.</strong><br>Operating condition, inspection status, working pressure and other technical information will be updated after confirmation.</span></div>
+            </div>
+            <div class="info-card">
+              <div class="info-title"><span>↗</span>Lý do cung cấp / Why Available</div>
+              <div class="richtext">Thiết bị được đưa vào danh mục thanh lý theo kế hoạch sắp xếp và<div>nâng cấp hệ thống sản xuất của Công ty.<br><span class="en">The equipment is being made available as part of the Company's production system restructuring and upgrade plan.</span></div></div>
+            </div>
+            <div class="info-card">
+              <div class="info-title"><span>□</span>Phạm vi cung cấp / Scope of Supply</div>
+              <div class="richtext">Các hạng mục đi kèm như hệ thống điều khiển, bơm, đầu đốt, phụ kiện và<div>tài liệu kỹ thuật sẽ được xác nhận trong quá trình trao đổi.<br><span class="en">Included items such as control system, pumps, burner, accessories and technical documents will be confirmed during discussion.</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+  <section class="section reveal">
+    <div class="section-label">DIRECT DISCUSSION</div>
+    <div class="section-title">Quy trình trao đổi / Discussion Process</div>
+    <div class="section-intro">Thông tin được bố trí theo trình tự để người mua nhanh chóng đánh giá mức độ phù hợp trước khi sắp xếp xem thiết bị.</div>
+    <div class="process">
+      <div class="step"><div class="step-num">01</div><b>Yêu cầu thông tin</b><small>Request information</small></div>
+      <div class="step"><div class="step-num">02</div><b>Xem thông số</b><small>Review specifications</small></div>
+      <div class="step"><div class="step-num">03</div><b>Kiểm tra thực tế</b><small>On site inspection</small></div>
+      <div class="step"><div class="step-num">04</div><b>Trao đổi thương mại</b><small>Commercial discussion</small></div>
+      <div class="step"><div class="step-num">05</div><b>Thống nhất bàn giao</b><small>Collection arrangement</small></div>
+    </div>
+  </section>
+
+  <section class="contact-section reveal" id="contact">
+    <div class="contact-grid">
+      <div>
+        <div class="kicker">CONTACT & INSPECTION</div>
+        <div class="contact-title richtext">Liên hệ để trao đổi<div>và xem thiết bị trực tiếp</div><div><br><span style="font-weight:400">Contact for Discussion &amp; Inspection</span></div></div>
+        <div class="contact-copy richtext">Khách hàng quan tâm vui lòng liên hệ để trao đổi thông tin, sắp xếp xem thiết bị và thương lượng trực tiếp.<br><em>Interested buyers are welcome to contact us for further information, on site inspection and direct commercial discussion.</em></div>
+        <div class="contact-details">
+          <b>Tran Hiep Thanh Textile Corporation (THTTEX)</b>
+          <div>Vietnam</div>
+          <a href="mailto:linhlv@thttextile.com.vn">Email:&nbsp;linhlv@thttextile.com.vn</a>
+          <a href="tel:+84908682132">Phone / Zalo / WhatsApp: 0908 682132</a>
+        </div>
+        <div class="contact-buttons">
+          <a href="mailto:linhlv@thttextile.com.vn">Email</a>
+          <a href="tel:+84908682132">Call</a>
+          <a href="https://wa.me/84908682132" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <form class="form-card" id="inquiryForm">
+        <label>Name / Họ tên</label>
+        <input id="qName" required>
+        <label>Company / Công ty</label>
+        <input id="qCompany">
+        <label>Email / Phone</label>
+        <input id="qContact" required>
+        <label>Interested Equipment / Thiết bị quan tâm</label>
+        <input id="qEquipment">
+        <label>Message / Nội dung</label>
+        <textarea id="qMessage"></textarea>
+        <button class="button primary" type="submit">Gửi yêu cầu / Send Inquiry</button>
+        <div class="form-note">The inquiry will open in your email application.</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>Tran Hiep Thanh Textile Corporation (THTTEX)</div>
+  <div>Liquidation of Machinery/Equipment</div>
+</footer>
+
+<a class="float-contact" href="#contact">✉ Liên hệ / Contact</a>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImage" alt="">
+  <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<script>
+const galleries = {"stenter": [{"src": "assets/images/stenter_01_AME03384.jpg", "name": "AME03384.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/stenter_02_AME03385.jpg", "name": "AME03385.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/stenter_03_AME03380.jpg", "name": "AME03380.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/stenter_04_AME03386.jpg", "name": "AME03386.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/stenter_05_AME03385.jpg", "name": "AME03385.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/stenter_06_AME03399.jpg", "name": "AME03399.JPG", "captionVi": "", "captionEn": ""}], "boiler": [{"src": "assets/images/boiler_01_LTAI0932.jpg", "name": "LTAI0932.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/boiler_02_AME03553.jpg", "name": "AME03553.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/boiler_03_AME03559.jpg", "name": "AME03559.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/boiler_04_AME03574.jpg", "name": "AME03574.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/boiler_05_AME03587.jpg", "name": "AME03587.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/boiler_06_AME03591.jpg", "name": "AME03591.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/boiler_07_AME03583.jpg", "name": "AME03583.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/boiler_08_AME03574.jpg", "name": "AME03574.JPG", "captionVi": "", "captionEn": ""}, {"src": "assets/images/boiler_09_AME03630.jpg", "name": "AME03630.JPG", "captionVi": "", "captionEn": ""}]};
+const galleryState = {stenter:0, boiler:0};
+let lbMachine = null;
+let lbIndex = 0;
+
+function switchImage(machine,index){
+  const items=galleries[machine]||[];
+  if(!items.length)return;
+  galleryState[machine]=index;
+  const sec=document.querySelector(`[data-gallery="${machine}"]`);
+  sec.querySelector(".gallery-main-img").src=items[index].src;
+  sec.querySelector(".gallery-index").textContent=`${index+1} / ${items.length}`;
+  document.querySelectorAll(`.thumb[data-machine="${machine}"]`).forEach((b,i)=>b.classList.toggle("active",i===index));
+}
+document.querySelectorAll(".thumb").forEach(b=>b.addEventListener("click",()=>switchImage(b.dataset.machine,Number(b.dataset.index))));
+
+function openLightbox(machine,index){
+  lbMachine=machine;lbIndex=index;updateLightbox();
+  document.getElementById("lightbox").classList.add("open");document.body.classList.add("lightbox-open");
+}
+function updateLightbox(){
+  const items=galleries[lbMachine]||[];if(!items.length)return;
+  lbIndex=(lbIndex+items.length)%items.length;
+  const it=items[lbIndex];
+  document.getElementById("lbImage").src=it.src;
+  document.getElementById("lbCaption").textContent=[it.captionVi,it.captionEn].filter(Boolean).join(" / ")||`${lbIndex+1} / ${items.length}`;
+}
+function closeLightbox(){
+  document.getElementById("lightbox").classList.remove("open");document.body.classList.remove("lightbox-open");
+}
+document.querySelectorAll("[data-zoom]").forEach(b=>b.addEventListener("click",()=>openLightbox(b.dataset.zoom,galleryState[b.dataset.zoom]||0)));
+document.getElementById("lbClose").onclick=closeLightbox;
+document.getElementById("lbPrev").onclick=()=>{lbIndex--;updateLightbox()};
+document.getElementById("lbNext").onclick=()=>{lbIndex++;updateLightbox()};
+document.getElementById("lightbox").addEventListener("click",e=>{if(e.target.id==="lightbox")closeLightbox()});
+document.addEventListener("keydown",e=>{
+  if(!document.getElementById("lightbox").classList.contains("open"))return;
+  if(e.key==="Escape")closeLightbox();
+  if(e.key==="ArrowLeft"){lbIndex--;updateLightbox()}
+  if(e.key==="ArrowRight"){lbIndex++;updateLightbox()}
+});
+
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}
+}),{threshold:.08});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+window.addEventListener("scroll",()=>{
+  const d=document.documentElement;
+  const max=d.scrollHeight-d.clientHeight;
+  document.getElementById("progress").style.width=(max?d.scrollTop/max*100:0)+"%";
+},{passive:true});
+
+document.getElementById("inquiryForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const subject="Equipment Inquiry - THTTEX";
+  const body=[
+    "Name: "+document.getElementById("qName").value,
+    "Company: "+document.getElementById("qCompany").value,
+    "Email / Phone: "+document.getElementById("qContact").value,
+    "Interested Equipment: "+document.getElementById("qEquipment").value,
+    "",
+    document.getElementById("qMessage").value
+  ].join("\n");
+  window.location.href="mailto:linhlv@thttextile.com.vn?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
